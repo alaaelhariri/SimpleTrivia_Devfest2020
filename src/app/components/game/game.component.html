@@ -1,0 +1,35 @@
+<mat-drawer-container class="game-container">
+  <mat-drawer class="players" mode="side" position="end" disableClose="true" opened>
+    <h1 class="title">
+        Players
+      <button routerLink="create-players" mat-icon-button color="accent" aria-label="Add Player">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+    </h1>
+    <div>
+      <div *ngFor="let player of players">
+        {{player.firstName}} {{player.lastName}} {{player.score}}
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="questions" hasBackdrop="false">
+    <h1>
+      Questions
+      <button routerLink="create-questions" mat-icon-button color="accent" aria-label="Add Question">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+    </h1>
+    <div>
+      <div *ngFor="let question of questions">
+        <mat-card>
+          <mat-card-title>
+            {{question.question}}
+          </mat-card-title>
+          <mat-card-content>
+            {{question.answer}}
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
