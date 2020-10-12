@@ -8,7 +8,7 @@
     </h1>
     <div>
       <div *ngFor="let player of players">
-        {{player.firstName}} {{player.lastName}} {{player.score}}
+        {{ player | player }} {{player.score}}
       </div>
     </div>
   </mat-drawer>
@@ -26,7 +26,7 @@
             {{question.question}}
           </mat-card-title>
           <mat-card-content>
-            {{question.answer}}
+            <span appSecret>{{question.answer}}</span>
           </mat-card-content>
         </mat-card>
       </div>

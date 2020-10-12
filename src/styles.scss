@@ -2,7 +2,7 @@
 @import "~@angular/material/theming";
 
 $custom-typography: mat-typography-config(
-  $body-1: mat-typography-level(18px, 24px, 400)
+  $body-1: mat-typography-level(18px, 24px, 400),
 );
 @include mat-core($custom-typography);
 
@@ -15,4 +15,12 @@ body {
   margin: 0;
   font-size: mat-font-size($custom-typography, body-1);
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.forms-component {
+  padding: 1%;
+}
+
+.spacer {
+  flex: 1 1 auto;
 }

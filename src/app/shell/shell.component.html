@@ -1,5 +1,7 @@
 <mat-toolbar color="primary">
     <span>Simple Trivia</span>
+    <span class="spacer"></span>
+    <span> Game started on: {{ startDate | date:'MMM dd, yyyy HH:mm:ss'}}</span>
 </mat-toolbar>
 <div class="shell-content">
     <ng-content></ng-content>

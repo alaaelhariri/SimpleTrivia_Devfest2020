@@ -1,1 +1,17 @@
-<p>player-create works!</p>
+<div class="forms-component">
+
+    <h1>
+        Create Player
+    </h1>
+    <div>
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" [(ngModel)]="player.firstName">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" [(ngModel)]="player.lastName">
+        </mat-form-field>
+        <button mat-button (click)="submit()">Submit</button>
+    </div>
+</div>

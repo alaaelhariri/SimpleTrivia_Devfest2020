@@ -6,8 +6,10 @@ import { MaterialModule } from './shared/modules/material/material.module';
 import { AppComponent } from './app.component';
 import { ShellComponent } from './shell/shell.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GameComponent, PlayerCreateComponent, QuestionsCreateComponent } from './components';
+import { PlayerPipe } from './pipes/player.pipe';
+import { SecretDirective } from './directives/secret.directive';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,14 @@ import { GameComponent, PlayerCreateComponent, QuestionsCreateComponent } from '
     ShellComponent,
     GameComponent,
     PlayerCreateComponent,
-    QuestionsCreateComponent
+    QuestionsCreateComponent,
+    PlayerPipe,
+    SecretDirective
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
     MaterialModule
