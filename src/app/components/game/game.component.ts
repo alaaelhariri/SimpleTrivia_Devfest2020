@@ -40,4 +40,8 @@ export class GameComponent implements OnInit {
       console.log('creating question');
     }
   }
+
+  incrementPlayerScore(player: Player): void {
+    this.playersService.incrementScore(player);
+  }
 }

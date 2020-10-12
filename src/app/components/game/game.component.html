@@ -1,7 +1,7 @@
 <mat-drawer-container class="game-container">
   <mat-drawer class="players" mode="side" position="end" disableClose="true" opened>
     <h1 class="title">
-        Players
+      Players
       <button routerLink="create-players" mat-icon-button color="accent" aria-label="Add Player">
         <mat-icon>add_circle</mat-icon>
       </button>
@@ -9,6 +9,9 @@
     <div>
       <div *ngFor="let player of players">
         {{ player | player }} {{player.score}}
+        <button (click)="incrementPlayerScore(player)" mat-icon-button color="accent" aria-label="Increment Score">
+          <mat-icon>plus_one</mat-icon>
+        </button>
       </div>
     </div>
   </mat-drawer>
