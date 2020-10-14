@@ -8,10 +8,11 @@
     </h1>
     <div>
       <div *ngFor="let player of players">
-        {{ player | player }} {{player.score}}
-        <button (click)="incrementPlayerScore(player)" mat-icon-button color="accent" aria-label="Increment Score">
-          <mat-icon>plus_one</mat-icon>
-        </button>
+          {{ player | player }} &nbsp; &nbsp; &nbsp;
+          <b>Score:</b> {{player.score}}
+          <button (click)="incrementPlayerScore(player)" mat-icon-button color="accent" aria-label="Increment Score">
+            <mat-icon>plus_one</mat-icon>
+          </button>
       </div>
     </div>
   </mat-drawer>
