@@ -4,14 +4,16 @@
         Create Player
     </h1>
     <div>
-        <mat-form-field>
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="First Name" [(ngModel)]="player.firstName">
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="Last Name" [(ngModel)]="player.lastName">
-        </mat-form-field>
-        <button mat-button (click)="submit()">Submit</button>
+        <form #form="ngForm" (ngSubmit)="submit()">
+            <mat-form-field>
+                <mat-label>First Name</mat-label>
+                <input matInput name="fname" placeholder="First Name" [(ngModel)]="player.firstName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput name="lname" placeholder="Last Name" [(ngModel)]="player.lastName" required>
+            </mat-form-field>
+            <button submit mat-button [disabled]="!form.valid">Submit</button>
+        </form>
     </div>
 </div>
